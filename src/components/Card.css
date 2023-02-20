@@ -1,0 +1,41 @@
+:root {
+    --perspective-value: 800px;
+}
+
+.card {
+    position: relative;
+    cursor: pointer;
+    height: 200px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.back,
+.front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: perspective(var(--perspective-value)) rotateY(0deg);
+}
+
+.flipped .back {
+    transform: perspective(var(--perspective-value)) rotateY(-180deg);
+}
+
+.front {
+    transform: perspective(var(--perspective-value)) rotateY(180deg);
+}
+
+.flipped .front {
+    transform: perspective(var(--perspective-value)) rotateY(0deg);
+}
