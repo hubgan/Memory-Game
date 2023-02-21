@@ -87,7 +87,7 @@ function App() {
   return (
     <div className="App">
       <div className={isEnd ? "blur" : ""}>
-        <h1>Hello World!</h1>
+        <h1>Memory Game</h1>
         <button onClick={shuffleCards}>New Game</button>
         
         <div className="card-container">
